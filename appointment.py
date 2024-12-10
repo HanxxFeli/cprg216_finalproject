@@ -45,7 +45,7 @@ class Appointment:
         return f'{self.__client_name},{self.__client_phone},{self.__appt_type},{self.__day_of_week},{self.__start_time_hour}'
     
     def __str__(self):
-        return f'{self.__client_name:<20}{self.__client_phone:<15}{self.get_day_of_week():<10s}{self.__start_time_hour+':00':<7}{'-':3}{self.get_end_time_hour()+':00':<10}{Appointment.APPT_TYPE_DESCS[self.__appt_type]:15}'
+        return f'{self.__client_name:<20}{self.__client_phone:<15}{self.get_day_of_week():<10s}{str(self.__start_time_hour)+':00':<7}{'-':3}{self.get_end_time_hour()+':00':<10}{Appointment.APPT_TYPE_DESCS[self.__appt_type]:15}'
     
     def get_appt_type_desc_and_price(appt_type):
         desc = Appointment.APPT_TYPE_DESCS[appt_type]
