@@ -51,12 +51,3 @@ class Appointment:
         desc = Appointment.APPT_TYPE_DESCS[appt_type]
         price = Appointment.APPT_TYPE_PRICES[appt_type]
         return f"{appt_type}: {desc} {price}"
-def main():
-    tam = Appointment('saturday','9')
-    tam.set_client_name("tam")
-    tam.set_client_phone('403-233-3944')
-    tam.set_appt_type(1)
-    print(tam)
-
-if __name__ == '__main__':
-    main()
