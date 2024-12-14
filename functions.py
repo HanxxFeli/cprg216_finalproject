@@ -59,3 +59,14 @@ def calculate_weekly_fees(appt_list):
         weekly_cost += ap.Appointment.APPT_TYPE_PRICES[appt.get_appt_type()]
     print(f'\n** Calculate total weekly fees **\nTotal weekly fees:  ${weekly_fee:.2d}\n')
 
+#function to check if selected day is in the appt list
+def show_appointments_by_day(appt_list,day):
+    """
+    parameters: receives appointment list and day
+    checks for the day in the object list
+
+    prints: out the appointments with that day
+    """
+    for appt in appt_list:
+        if appt.get_day_of_week() == day:
+            print(appt)
