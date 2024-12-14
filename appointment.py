@@ -66,6 +66,6 @@ class Appointment:
         str_rep = f"{self.get_client_name():20}{self.get_client_phone():15}{self.get_day_of_week():10}{self.get_start_time_hour():02d}00{'-':^5}{self.get_end_time_hour():02d}{':00':8}{self.get_appt_type_desc()}"
         return str_rep
 
-    def get_appt_type_desc_and_price(self, appt_type): 
-        appt_type = int(input("Enter your appointment type"))
-        return f"{self.APPT_TYPE_DESC[appt_type]} {self.APPT_TYPE_PRICES[appt_type]}"
+    def get_appt_type_desc_and_price(appt_type):
+        return (f'{appt_type}: {Appointment.get_appt_type_desc(appt_type)} ${Appointment.get_appt_type_price(appt_type)}')
+        
