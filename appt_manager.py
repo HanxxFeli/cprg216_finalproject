@@ -20,7 +20,10 @@ WEEKDAYS = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
 #print menu function:
 def print_menu():
 
-#top of menu:
+"""
+This function prints the main menu of the system and prompts the user for a valid input.
+It keeps asking the user until they enter a valid menu selection.
+"""
 
     print('\n' #(\n) --> to seperate for formating 
           '='*38)
@@ -41,6 +44,15 @@ def print_menu():
 
 #weekly fee calculator:
 def calculate_weekly_fees(appt_list):
+
+"""
+This function calculates the total fees for all appointments in the provided list
+by retrieving the price associated with each appointment type.
+
+:param appt_list: List of appointments to be processed
+:return: None
+"""
+
     total_fee = 0 #1                                                          #1 --> sets the fee count to 0 to safeguard 
     for i in appt_list: #2                                                    #2 --> iterates through appt list to add all fees to total
         total_fee += ap.Appointment.APPT_TYPE_PRICES[i.get_appt_type()] #3    #3 --> calls Appointment class to get dict of prices  
@@ -48,7 +60,18 @@ def calculate_weekly_fees(appt_list):
           'Total weekly fees: ${total_fee:,.2f}') #4                          #4 --> prints the weekly fees 
     
 #creating weekly calender
-def create_weekly_calendar(appt_list = []):            
+def create_weekly_calendar(appt_list = []): 
+  
+ """
+This function creates a weekly calendar, where each day is associated with 
+available hours (9AM to 3PM) and each hour is represented by an Appointment object.
+    
+The appointments are stored in the provided appt_list.
+    
+:param appt_list: List where created appointments will be stored (default: empty list)
+:return: The populated list of appointments
+"""
+  
     appt_list = []                                     
     appt_list.clear() #1                                     #1 --> clears list to [] to safeguard
     for day in WEEKDAYS: #2                                  #2 --> iterates through WEEKDAY so hours objects for each weekday can be set
