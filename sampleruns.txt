@@ -1,0 +1,554 @@
+Starting the Appointment Manager System
+Weekly calendar created
+Would you like to load previously scheduled appointments from a file (Y/N)? n
+
+======================================
+   Hair So Long Appointment Manager   
+======================================
+ 1 Schedule an appointment
+ 2 Find appointment by name
+ 3 Print calendar for a specific day
+ 4 Cancel an appointment
+ 5 Change an appointment
+ 6 Calculate total fees for a day
+ 7 Calculate total weekly fees
+ 0 Exit the system
+Enter your selection: 8
+
+Invalid option
+Enter your selection: k
+
+Invalid option
+Enter your selection: 0
+
+** Exit the system **
+Would you like to save all scheduled appointments to a file (Y/N)? n
+Good Bye!
+
+Starting the Appointment Manager System
+Weekly calendar created
+Would you like to load previously scheduled appointments from a file (Y/N)? Y
+Enter appointment filename: appointments.cs
+File not found. Re-enter appointment filename: appointments1.csv
+3 previously scheduled appointments have been loaded
+
+======================================
+   Hair So Long Appointment Manager   
+======================================
+ 1 Schedule an appointment
+ 2 Find appointment by name
+ 3 Print calendar for a specific day
+ 4 Cancel an appointment
+ 5 Change an appointment
+ 6 Calculate total fees for a day
+ 7 Calculate total weekly fees
+ 0 Exit the system
+Enter your selection: 3
+
+** Print calendar for a specific day **
+Enter day of week: toosday
+Day must be one of: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
+Enter day of week: Saturday
+
+Appointments for Saturday
+
+Client Name         Phone          Day       Start     End       Type
+-------------------------------------------------------------------------------------
+Tyler               587-123-4567   Saturday  09:00  -  10:00     Mens Coluring
+Stephanie           368-999-1111   Saturday  10:00  -  11:00     Ladies Cut
+                                   Saturday  11:00  -  12:00     Available
+                                   Saturday  12:00  -  13:00     Available
+                                   Saturday  13:00  -  14:00     Available
+                                   Saturday  14:00  -  15:00     Available
+                                   Saturday  15:00  -  16:00     Available
+                                   Saturday  16:00  -  17:00     Available
+
+======================================
+   Hair So Long Appointment Manager
+======================================
+ 1 Schedule an appointment
+ 2 Find appointment by name
+ 3 Print calendar for a specific day
+ 4 Cancel an appointment
+ 5 Change an appointment
+ 6 Calculate total fees for a day
+ 7 Calculate total weekly fees
+ 0 Exit the system
+Enter your selection: 1
+
+** Schedule an appointment **
+Enter day of week: thursday
+Enter start hour (24 hour clock): 11
+Client Name: Steven
+Client Phone: 403-600-6000
+
+Appointment types
+   1: Mens Cut $40
+   2: Ladies Cut $60
+   3: Mens Coluring $40
+   4: Ladies Colouring $80
+Type of Appointment: 1
+
+Appointment for Steven has been scheduled for Thursday at 11:00
+
+======================================
+   Hair So Long Appointment Manager
+======================================
+ 1 Schedule an appointment
+ 2 Find appointment by name
+ 3 Print calendar for a specific day
+ 4 Cancel an appointment
+ 5 Change an appointment
+ 6 Calculate total fees for a day
+ 7 Calculate total weekly fees
+ 0 Exit the system
+Enter your selection: 1
+
+** Schedule an appointment **
+Enter day of week: Thursday
+Enter start hour (24 hour clock): 11
+
+Sorry that time slot is booked already!
+
+======================================
+   Hair So Long Appointment Manager
+======================================
+ 1 Schedule an appointment
+ 2 Find appointment by name
+ 3 Print calendar for a specific day
+ 4 Cancel an appointment
+ 5 Change an appointment
+ 6 Calculate total fees for a day
+ 7 Calculate total weekly fees
+ 0 Exit the system
+Enter your selection: 1
+
+** Schedule an appointment **
+Enter day of week: sunday
+Day must be one of: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
+Enter day of week: Monday
+Enter start hour (24 hour clock): 8
+
+Sorry that time slot is not in the weekly calendar!
+
+======================================
+   Hair So Long Appointment Manager
+======================================
+ 1 Schedule an appointment
+ 2 Find appointment by name
+ 3 Print calendar for a specific day
+ 4 Cancel an appointment
+ 5 Change an appointment
+ 6 Calculate total fees for a day
+ 7 Calculate total weekly fees
+ 0 Exit the system
+Enter your selection: 2
+
+** Find appointment by name **
+Enter Client Name: Steven
+
+Appointments for Steven
+
+Client Name         Phone          Day       Start     End       Type
+-------------------------------------------------------------------------------------
+Steven              403-600-6000   Thursday  11:00  -  12:00     Mens Cut
+
+======================================
+   Hair So Long Appointment Manager
+======================================
+ 1 Schedule an appointment
+ 2 Find appointment by name
+ 3 Print calendar for a specific day
+ 4 Cancel an appointment
+ 5 Change an appointment
+ 6 Calculate total fees for a day
+ 7 Calculate total weekly fees
+ 0 Exit the system
+Enter your selection: 2
+
+** Find appointment by name **
+Enter Client Name: hamdy
+
+Appointments for hamdy
+
+Client Name         Phone          Day       Start     End       Type
+-------------------------------------------------------------------------------------
+No appointments found.
+
+======================================
+   Hair So Long Appointment Manager
+======================================
+ 1 Schedule an appointment
+ 2 Find appointment by name
+ 3 Print calendar for a specific day
+ 4 Cancel an appointment
+ 5 Change an appointment
+ 6 Calculate total fees for a day
+ 7 Calculate total weekly fees
+ 0 Exit the system
+Enter your selection: 3
+
+** Print calendar for a specific day **
+Enter day of week: Thursday
+
+Appointments for Thursday
+
+Client Name         Phone          Day       Start     End       Type
+-------------------------------------------------------------------------------------
+                                   Thursday  09:00  -  10:00     Available
+                                   Thursday  10:00  -  11:00     Available
+Steven              403-600-6000   Thursday  11:00  -  12:00     Mens Cut
+                                   Thursday  12:00  -  13:00     Available
+Gabriela            368-111-9999   Thursday  13:00  -  14:00     Ladies Colouring
+                                   Thursday  14:00  -  15:00     Available
+                                   Thursday  15:00  -  16:00     Available
+                                   Thursday  16:00  -  17:00     Available
+
+======================================
+   Hair So Long Appointment Manager
+======================================
+ 1 Schedule an appointment
+ 2 Find appointment by name
+ 3 Print calendar for a specific day
+ 4 Cancel an appointment
+ 5 Change an appointment
+ 6 Calculate total fees for a day
+ 7 Calculate total weekly fees
+ 0 Exit the system
+Enter your selection: 5
+
+** Change an appointment **
+Enter original day of week: Thursday
+Enter original start hour (24 hour clock): 11
+Enter new day of week: saturday
+Enter new start hour (24 hour clock): 12
+
+Appointment for Steven has been changed to Saturday at 12:00
+
+======================================
+   Hair So Long Appointment Manager
+======================================
+ 1 Schedule an appointment
+ 2 Find appointment by name
+ 3 Print calendar for a specific day
+ 4 Cancel an appointment
+ 5 Change an appointment
+ 6 Calculate total fees for a day
+ 7 Calculate total weekly fees
+ 0 Exit the system
+Enter your selection: 3
+
+** Print calendar for a specific day **
+Enter day of week: Thursday
+
+Appointments for Thursday
+
+Client Name         Phone          Day       Start     End       Type
+-------------------------------------------------------------------------------------
+                                   Thursday  09:00  -  10:00     Available
+                                   Thursday  10:00  -  11:00     Available
+                                   Thursday  11:00  -  12:00     Available
+                                   Thursday  12:00  -  13:00     Available
+Gabriela            368-111-9999   Thursday  13:00  -  14:00     Ladies Colouring
+                                   Thursday  14:00  -  15:00     Available
+                                   Thursday  15:00  -  16:00     Available
+                                   Thursday  16:00  -  17:00     Available
+
+======================================
+   Hair So Long Appointment Manager
+======================================
+ 1 Schedule an appointment
+ 2 Find appointment by name
+ 3 Print calendar for a specific day
+ 4 Cancel an appointment
+ 5 Change an appointment
+ 6 Calculate total fees for a day
+ 7 Calculate total weekly fees
+ 0 Exit the system
+Enter your selection: 3
+
+** Print calendar for a specific day **
+Enter day of week: Saturday
+
+Appointments for Saturday
+
+Client Name         Phone          Day       Start     End       Type
+-------------------------------------------------------------------------------------
+Tyler               587-123-4567   Saturday  09:00  -  10:00     Mens Coluring
+Stephanie           368-999-1111   Saturday  10:00  -  11:00     Ladies Cut
+                                   Saturday  11:00  -  12:00     Available
+Steven              403-600-6000   Saturday  12:00  -  13:00     Mens Cut
+                                   Saturday  13:00  -  14:00     Available
+                                   Saturday  14:00  -  15:00     Available
+                                   Saturday  15:00  -  16:00     Available
+                                   Saturday  16:00  -  17:00     Available
+
+======================================
+   Hair So Long Appointment Manager
+======================================
+ 1 Schedule an appointment
+ 2 Find appointment by name
+ 3 Print calendar for a specific day
+ 4 Cancel an appointment
+ 5 Change an appointment
+ 6 Calculate total fees for a day
+ 7 Calculate total weekly fees
+ 0 Exit the system
+Enter your selection: 5
+
+** Change an appointment **
+Enter original day of week: saturday
+Enter original start hour (24 hour clock): 12
+Enter new day of week: saturday
+Enter new start hour (24 hour clock): 9
+
+The new time slot is already booked
+
+======================================
+   Hair So Long Appointment Manager
+======================================
+ 1 Schedule an appointment
+ 2 Find appointment by name
+ 3 Print calendar for a specific day
+ 4 Cancel an appointment
+ 5 Change an appointment
+ 6 Calculate total fees for a day
+ 7 Calculate total weekly fees
+ 0 Exit the system
+Enter your selection: 5
+
+** Change an appointment **
+Enter original day of week: Saturday
+Enter original start hour (24 hour clock): 11
+
+That time slot isn't booked and doesn't need to be changed
+
+======================================
+   Hair So Long Appointment Manager
+======================================
+ 1 Schedule an appointment
+ 2 Find appointment by name
+ 3 Print calendar for a specific day
+ 4 Cancel an appointment
+ 5 Change an appointment
+ 6 Calculate total fees for a day
+ 7 Calculate total weekly fees
+ 0 Exit the system
+Enter your selection: 6
+
+** Calculate total fees for a day **
+Enter day of week: saturday
+
+Total fees for Saturday: $140.00
+
+======================================
+   Hair So Long Appointment Manager
+======================================
+ 1 Schedule an appointment
+ 2 Find appointment by name
+ 3 Print calendar for a specific day
+ 4 Cancel an appointment
+ 5 Change an appointment
+ 6 Calculate total fees for a day
+ 7 Calculate total weekly fees
+ 0 Exit the system
+Enter your selection: 6
+
+** Calculate total fees for a day **
+Enter day of week: toosday
+Day must be one of: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
+Enter day of week: sunday
+Day must be one of: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
+Enter day of week: Thursday
+
+Total fees for Saturday: $80.00
+
+======================================
+   Hair So Long Appointment Manager
+======================================
+ 1 Schedule an appointment
+ 2 Find appointment by name
+ 3 Print calendar for a specific day
+ 4 Cancel an appointment
+ 5 Change an appointment
+ 6 Calculate total fees for a day
+ 7 Calculate total weekly fees
+ 0 Exit the system
+Enter your selection: 7
+
+** Calculate total weekly fees **
+Total weekly fees:  $220.00
+
+======================================
+   Hair So Long Appointment Manager
+======================================
+ 1 Schedule an appointment
+ 2 Find appointment by name
+ 3 Print calendar for a specific day
+ 4 Cancel an appointment
+ 5 Change an appointment
+ 6 Calculate total fees for a day
+ 7 Calculate total weekly fees
+ 0 Exit the system
+Enter your selection: 4
+
+** Cancel an appointment **
+Enter day of week: Sat
+Day must be one of: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
+Enter day of week: Saturday
+Enter start hour (24 hour clock): 9
+
+Appointment: Saturday 09:00 - 10:00 for Tyler has been cancelled!
+
+======================================
+   Hair So Long Appointment Manager
+======================================
+ 1 Schedule an appointment
+ 2 Find appointment by name
+ 3 Print calendar for a specific day
+ 4 Cancel an appointment
+ 5 Change an appointment
+ 6 Calculate total fees for a day
+ 7 Calculate total weekly fees
+ 0 Exit the system
+Enter your selection: 2
+
+** Find appointment by name **
+Enter Client Name: Tyler
+
+Appointments for Tyler
+
+Client Name         Phone          Day       Start     End       Type
+-------------------------------------------------------------------------------------
+No appointments found.
+
+======================================
+   Hair So Long Appointment Manager
+======================================
+ 1 Schedule an appointment
+ 2 Find appointment by name
+ 3 Print calendar for a specific day
+ 4 Cancel an appointment
+ 5 Change an appointment
+ 6 Calculate total fees for a day
+ 7 Calculate total weekly fees
+ 0 Exit the system
+Enter your selection: 4
+
+** Cancel an appointment **
+Enter day of week: saturday
+Enter start hour (24 hour clock): 11
+
+That time slot isn't booked and doesn't need to be cancelled
+
+======================================
+   Hair So Long Appointment Manager
+======================================
+ 1 Schedule an appointment
+ 2 Find appointment by name
+ 3 Print calendar for a specific day
+ 4 Cancel an appointment
+ 5 Change an appointment
+ 6 Calculate total fees for a day
+ 7 Calculate total weekly fees
+ 0 Exit the system
+Enter your selection: 0
+
+** Exit the system **
+Would you like to save all scheduled appointments to a file (Y/N)? y
+Enter appointment filename: appointments3.csv
+
+3 scheduled appointments have been successfully saved
+Good Bye!
+
+Starting the Appointment Manager System
+Weekly calendar created
+Would you like to load previously scheduled appointments from a file (Y/N)? N
+
+======================================
+   Hair So Long Appointment Manager   
+======================================
+ 1 Schedule an appointment
+ 2 Find appointment by name
+ 3 Print calendar for a specific day
+ 4 Cancel an appointment
+ 5 Change an appointment
+ 6 Calculate total fees for a day
+ 7 Calculate total weekly fees
+ 0 Exit the system
+Enter your selection: 1
+
+** Schedule an appointment **
+Enter day of week: monday
+Enter start hour (24 hour clock): 13
+Client Name: Maria
+Client Phone: 403-700-7000
+
+Appointment types
+   1: Mens Cut $40
+   2: Ladies Cut $60
+   3: Mens Coluring $40
+   4: Ladies Colouring $80
+Type of Appointment: 2
+
+Appointment for Maria has been scheduled for Monday at 13:00
+
+======================================
+   Hair So Long Appointment Manager
+======================================
+ 1 Schedule an appointment
+ 2 Find appointment by name
+ 3 Print calendar for a specific day
+ 4 Cancel an appointment
+ 5 Change an appointment
+ 6 Calculate total fees for a day
+ 7 Calculate total weekly fees
+ 0 Exit the system
+Enter your selection: 2
+
+** Find appointment by name **
+Enter Client Name: ma
+
+Appointments for ma
+
+Client Name         Phone          Day       Start     End       Type
+-------------------------------------------------------------------------------------
+Maria               403-700-7000   Monday    13:00  -  14:00     Ladies Cut
+
+======================================
+   Hair So Long Appointment Manager
+======================================
+ 1 Schedule an appointment
+ 2 Find appointment by name
+ 3 Print calendar for a specific day
+ 4 Cancel an appointment
+ 5 Change an appointment
+ 6 Calculate total fees for a day
+ 7 Calculate total weekly fees
+ 0 Exit the system
+Enter your selection: 7
+
+** Calculate total weekly fees **
+Total weekly fees:  $60.00
+
+======================================
+   Hair So Long Appointment Manager
+======================================
+ 1 Schedule an appointment
+ 2 Find appointment by name
+ 3 Print calendar for a specific day
+ 4 Cancel an appointment
+ 5 Change an appointment
+ 6 Calculate total fees for a day
+ 7 Calculate total weekly fees
+ 0 Exit the system
+Enter your selection: 0
+
+** Exit the system **
+Would you like to save all scheduled appointments to a file (Y/N)? y
+Enter appointment filename: appointments3.csv
+File already exists. Do you want to overwrite it (Y/N)? N
+Enter appointment filename: appointments4.csv
+
+1 scheduled appointments have been successfully saved
+Good Bye!
