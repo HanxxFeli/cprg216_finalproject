@@ -23,9 +23,9 @@ def print_menu():
 #top of menu:
 
     print('\n' #(\n) --> to seperate for formating 
-          '=======================================')
+          '='*38)
     print(f'{'Hair So Long Appointment Manager':^38}') #(:^38) -->  centers in width of 38 charactors long
-    print('=======================================')
+    print('='*38)
 
 #iterating through the MENU_SELECTION dict:
 
