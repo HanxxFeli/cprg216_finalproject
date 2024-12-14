@@ -80,7 +80,7 @@ def schedule_an_appointment(appt_list):
         else:
             print('\nSorry that time slot is booked already!')
 
-def input_start_hour(promt):
+def input_start_hour(prompt):
     """
     Prompts the user to input a start hour for an appointment and validates it.
 
@@ -95,7 +95,7 @@ def input_start_hour(promt):
         str: The valid start hour formatted as a two-digit string (e.g., "09", "10").
         None: If the entered hour is outside the valid range.
     """
-    start_hour = input(promt)
+    start_hour = input(prompt)
     if int(start_hour) not in AVAIL_HOURS:     
         print('\nSorry that time slot is not in the weekly calendar!')
         return None
