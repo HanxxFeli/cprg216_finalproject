@@ -1,5 +1,16 @@
 import appointment as ap
 
+OPTION = {'1':'Schedule an appointment',
+          '2':'Find appointment by name', 
+          '3':'Print calendar for a specific day',
+          '4':'Cancel an appointment',
+          '5':'Change an appointment',
+          '6':'Calculate total fees for a day',
+          '7':'Calculate total weekly fees',
+          '0':' Exit the system'}
+WEEKDAYS = ['Monday','Tuesday', "Wednesday", "Thursday", "Friday", "Saturday"]
+AVAIL_HOURS = [9, 10, 11, 12, 13, 14, 15, 16]
+
 
 def find_appointment_by_time(appt_list, day, start_hour):
     """
@@ -82,7 +93,15 @@ def change_appointment_by_day_time(appt_list):
                 else:
                     print('\nThe new time slot is already booked')
         
-
-
+# Additional function for getting the start hour. Functions similar to input_day_of_week()
+def input_start_hour(promt):
+    start_hour = input(promt)
+    if int(start_hour) not in AVAIL_HOURS:            
+        print('\nSorry that time slot is not in the weekly calendar!')
+        return None
+    else:
+        if start_hour == '9': 
+            start_hour = '09'
+        return start_hour
 
 
