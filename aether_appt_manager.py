@@ -41,7 +41,6 @@ def load_scheduled_appointments(appt_list):
         scheduled_appt_num += 1
     return scheduled_appt_num
       
-
 def schedule_an_appointment(appt_list):
     """
     Schedules an appointment for a client if the specified time slot is available. 
@@ -141,6 +140,39 @@ def save_scheduled_appointments(appt_list):
         print(f'\n{scheduled_appts} scheduled appointments have been successfully saved')
     print('Good Bye!')
 
+def formated_display(name):
+    """
+    Displays a formatted header
+    """
+    print(f'\nAppointments for {name}\n\n{'Client Name':20}{'Phone':15}{'Day':10}{'Start':10}{'End':10}{'Type':15}')
+    print(SINGLE_DASH)
+          
+def cancel_an_appointment(appt_list):
+    """
+    Cancels a scheduled appointment based on the user's input.
+
+    Prompts the user to enter the day of the week and the start hour of the appointment 
+    they want to cancel. If the appointment exists and is scheduled, it is canceled, 
+    and a confirmation message is displayed. If no appointment exists at the specified 
+    time, a message is displayed indicating that cancellation is unnecessary.
+
+    Parameters:
+        appt_list (list): A list of appointment objects to search through.
+
+    Note:
+        - Uses the `input_day_of_week()` and `input_start_hour()` helper functions 
+          to gather user input for the day and time.
+    """
+    day = input_day_of_week('\n** Cancel an appointment **\nEnter day of week: ')
+    start_hour = input_start_hour('Enter start hour (24 hour clock): ')
+    if start_hour != None:
+        appt = find_appointment_by_time(appt_list, day, start_hour)
+        if appt.get_client_name() != '':      
+            print(f'\nAppointment: {day} {start_hour}:00 - {appt.get_end_time_hour()}:00 for {appt.get_client_name()} has been cancelled!')
+            appt.cancel()
+        else:
+            print("\nThat time slot isn't booked and doesn't need to be cancelled")
+                  
 def create_weekly_calendar(appt_list=[]):
     pass
 
@@ -160,9 +192,6 @@ def show_appointments_by_day(appt_list, day):
     pass
 
 def change_appointment_by_day_time(appt_list):
-    pass
-
-def cancel_an_appointment(appt_list):
     pass
 
 def calculate_fees_per_day(appt_list):
@@ -188,6 +217,7 @@ def main():
                 show_appointments_by_name(appt_list, client_name)
             case '3':
                 day = input_day_of_week('\n** Print calendar for a specific day **\nEnter day of week: ')
+                formated_display(day.title())
                 show_appointments_by_day(appt_list,day)
             case '4':
                 cancel_an_appointment(appt_list)
