@@ -14,6 +14,8 @@ MENU_SELECTION = {'1' : 'Schedule an appointment',
                   '7' : 'Calculate total weekly fees',
                   '0' : 'Exit the system'}
 
+DOUBLE_DASH = '-' * 38
+
 #list for weekdays for stuff
 WEEKDAYS = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
 
@@ -25,10 +27,10 @@ This function prints the main menu of the system and prompts the user for a vali
 It keeps asking the user until they enter a valid menu selection.
 """
 
-    print('\n' #(\n) --> to seperate for formating 
-          '='*38)
+    print('\n', #(\n) --> to seperate for formating 
+          DOUBLE_DASH)
     print(f'{'Hair So Long Appointment Manager':^38}') #(:^38) -->  centers in width of 38 charactors long
-    print('='*38)
+    print(DOUBLE_DASH)
 
 #iterating through the MENU_SELECTION dict:
 
