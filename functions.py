@@ -56,6 +56,6 @@ def calculate_weekly_fees(appt_list):
     """
     weekly_fee = 0
     for appointment in appt_list:
-        weekly_cost += ap.Appointment.__APPT_TYPE_PRICES[appt.get_appt_type()]
+        weekly_cost += ap.Appointment.APPT_TYPE_PRICES[appt.get_appt_type()]
     print(f'\n** Calculate total weekly fees **\nTotal weekly fees:  ${weekly_fee:.2d}\n')
 
