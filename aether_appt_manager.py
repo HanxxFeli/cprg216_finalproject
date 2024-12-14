@@ -9,36 +9,8 @@ OPTION = {'1':'Schedule an appointment',
           '7':'Calculate total weekly fees',
           '0':' Exit the system'}
 WEEKDAYS = ['Monday','Tuesday', "Wednesday", "Thursday", "Friday", "Saturday"]
+AVAIL_HOURS = [9, 10, 11, 12, 13, 14, 15, 16]
 
-def main():
-    appt_list = []
-    create_weekly_calendar(appt_list)
-    user_choice = input('Starting the Appointment Manager System\nWeekly calendar created\nWould you like to load previously scheduled appointments from a file (Y/N)? ').upper()
-    if user_choice == 'Y':
-        scheduled_appts = load_scheduled_appointments(appt_list)
-        print(f'{scheduled_appts} previously scheduled appointments have been loaded')
-    user_choice = print_menu()
-    while user_choice != '0':
-        match user_choice:
-            case '1':
-                schedule_an_appointment(appt_list)
-            case '2':
-                client_name = find_appointments_by_name()
-                show_appointments_by_name(appt_list, client_name)
-            case '3':
-                day = input_day_of_week('\n** Print calendar for a specific day **\nEnter day of week: ')
-                show_appointments_by_day(appt_list,day)
-            case '4':
-                cancel_an_appointment(appt_list)
-            case '5':
-                change_appointment_by_day_time(appt_list)
-            case '6':
-                calculate_fees_per_day(appt_list)
-            case '7':
-                calculate_weekly_fees(appt_list)
-        user_choice = print_menu()
-    if user_choice == '0':
-        save_scheduled_appointments(appt_list)
 
 def load_scheduled_appointments(appt_list):
     """
@@ -125,7 +97,7 @@ def input_start_hour(promt):
         None: If the entered hour is outside the valid range.
     """
     start_hour = input(promt)
-    if int(start_hour) < 9 or int(start_hour) > 16:    
+    if int(start_hour) not in AVAIL_HOURS:     
         print('\nSorry that time slot is not in the weekly calendar!')
         return None
     else:
@@ -169,8 +141,6 @@ def save_scheduled_appointments(appt_list):
         print(f'\n{scheduled_appts} scheduled appointments have been successfully saved')
     print('Good Bye!')
 
-
-        
 def create_weekly_calendar(appt_list=[]):
     pass
 
@@ -200,6 +170,36 @@ def calculate_fees_per_day(appt_list):
 
 def calculate_weekly_fees(appt_list):
     pass
+
+def main():
+    appt_list = []
+    create_weekly_calendar(appt_list)
+    user_choice = input('Starting the Appointment Manager System\nWeekly calendar created\nWould you like to load previously scheduled appointments from a file (Y/N)? ').upper()
+    if user_choice == 'Y':
+        scheduled_appts = load_scheduled_appointments(appt_list)
+        print(f'{scheduled_appts} previously scheduled appointments have been loaded')
+    user_choice = print_menu()
+    while user_choice != '0':
+        match user_choice:
+            case '1':
+                schedule_an_appointment(appt_list)
+            case '2':
+                client_name = find_appointments_by_name()
+                show_appointments_by_name(appt_list, client_name)
+            case '3':
+                day = input_day_of_week('\n** Print calendar for a specific day **\nEnter day of week: ')
+                show_appointments_by_day(appt_list,day)
+            case '4':
+                cancel_an_appointment(appt_list)
+            case '5':
+                change_appointment_by_day_time(appt_list)
+            case '6':
+                calculate_fees_per_day(appt_list)
+            case '7':
+                calculate_weekly_fees(appt_list)
+        user_choice = print_menu()
+    if user_choice == '0':
+        save_scheduled_appointments(appt_list)
 
 if __name__ == '__main__':
     main()
