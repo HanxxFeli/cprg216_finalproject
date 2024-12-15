@@ -365,7 +365,7 @@ def calculate_fees_per_day(appt_list):
     for appt in appt_list:
         if appt.get_day_of_week() == day:
             total_fee += ap.Appointment.APPT_TYPE_PRICES[appt.get_appt_type()]
-    print(f'\nTotal fees for Saturday: ${total_fee:,.2f}')
+    print(f'\nTotal fees for {day}: ${total_fee:,.2f}')
 
 def calculate_weekly_fees(appt_list):
     """
